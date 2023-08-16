@@ -9,16 +9,16 @@ class ContactPoints_menu_view:
 
         #functions for getting input text
         def save_seat_height(event):
-            seat_heigth = ent_seat_heigth.get()
+            self.seat_heigth = ent_seat_heigth.get()
             
         def save_bb_grip(event):
-            bb_grip_distance = ent_bb_grip.get()
+            self.bb_grip_distance = ent_bb_grip.get()
             
         def save_seat_grip(event):
-            seat_grip_distance = ent_seat_grip.get()
+            self.seat_grip_distance = ent_seat_grip.get()
 
         def save_seat_angle(event):
-            seat_angle = ent_seat_angle.get()
+            self.seat_angle = ent_seat_angle.get()
             
         #Setting up menu frames
         frm_text = tk.Frame(master=self.master)
