@@ -48,14 +48,3 @@ class ContactPoints :
         
         angle = degrees(atan(pos_grip.y / pos_grip.x))
         return angle
-
-    def print(self):
-        print("bb: 0, 0")
-        grip = self.pos_grip()
-        print("grip: " ,grip.x, ", ", grip.y)
-        seat = self.pos_seat()
-        print("seat: " ,seat.x, ", ", seat.y)
-        
-        print("seat length: ", self.bb_seat_distance, "angle: ", self.bb_seat_angle)
-        print("bb to grip length: ", self.bb_grip_distance, "angle: ", self.bb_grip_angle)
-        print("seat to grip length: ", self.distance_seat_grip(), "angle: ", self.angle_seat_grip())

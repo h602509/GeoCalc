@@ -2,10 +2,10 @@ from FrameComponents.ContactPoints import ContactPoints
 
 class ContactPoints_menu_view:
     
-    def __init__(self, master, tk) :
+    def __init__(self, master, tk, cp) :
         self.master = master
         self.tk = tk
-        cp = ContactPoints()
+        self.cp = cp
 
         #functions for getting input text
         def save_seat_height(event):
@@ -19,9 +19,8 @@ class ContactPoints_menu_view:
 
         def save_seat_angle(event):
             seat_angle = ent_seat_angle.get()
-            print(seat_angle)
-
-        #Setting up menu
+            
+        #Setting up menu frames
         frm_text = tk.Frame(master=self.master)
         frm_text.pack(side="left", fill="y")
         frm_input = tk.Frame(master=self.master)
@@ -67,7 +66,6 @@ class ContactPoints_menu_view:
         lbl_seat_angle = tk.Label(master=frm_text, text="     attack angle:")
         lbl_seat_angle.pack(padx=5, pady=7)
 
-        test_angle = "42"
         angle_bb_grip = cp.angle_bb_grip()
 
         lbl_seat_angle_output = tk.Label(master=frm_input, text=str(angle_bb_grip))
@@ -77,20 +75,9 @@ class ContactPoints_menu_view:
         lbl_seat_angle = tk.Label(master=frm_text, text="Seated attack angle:")
         lbl_seat_angle.pack(padx=5, pady=7)
 
-        test_angle2 = "2"
         angle_seat_grip = cp.angle_seat_grip()
 
         lbl_seat_angle_output = tk.Label(master=frm_input, text=str(angle_seat_grip))
         lbl_seat_angle_output.pack(padx=5, pady=7)
 
-        #Grip position
-        grip_pos = cp.pos_grip()
-
-        #Setting up drawing space
-        #win_main.update()
-        #frm_canvas = tk.Frame(master=win_main, width = win_main.winfo_width() - frm_text.winfo_width() - frm_input.winfo_width(), bg="black")
-        #frm_canvas.pack(side="right", fill="both", expand=True)
-
-        #Init mainloop
-        #win_main.mainloop()
                 

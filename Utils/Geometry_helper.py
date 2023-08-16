@@ -30,10 +30,8 @@ class Geometry_helper:
 
 
         if xi1 > xi2:
-            print(xi1, yi1)
             return Point(xi1, yi1)
 
         else:
-            print(xi2, yi2)
             return Point(xi2, yi2)
             
