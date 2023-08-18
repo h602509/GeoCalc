@@ -45,3 +45,7 @@ class ContactPoints :
         angle = degrees(atan(pos_grip[0] / pos_grip[1]))
         return angle
     
+    def points_cp_offset(self, offset):
+        seat_offset = (self.pos_seat()[0] + offset[0], - self.pos_seat()[1] + offset[1])
+        grip_offset = (self.pos_grip()[0] + offset[0], - self.pos_grip()[1] + offset[1])
+        return (offset, seat_offset, grip_offset, offset)

@@ -48,9 +48,6 @@ class Main_window :
         ContactPoints_menu_view(frm_menu, tk, cp)
         
         #draw on canvas
-        
-
-        
         if draw_outline:
             draw_bb_outline(canvas, bb, color_outline, color_metal, color_bg, offset)
         
@@ -64,15 +61,11 @@ class Main_window :
     
 
 def draw_contactpoints(canvas: Canvas, cp: ContactPoints, color_cp, dash, offset):
-    seat = cp.pos_seat
-    grip = cp.pos_grip
-    canvas.create_line(offset, cp.pos_seat(), cp.pos_grip()
-                        , offset, fill=color_cp, dash= dash)
+    canvas.create_line(cp.points_cp_offset(offset), fill=color_cp, dash= dash)
 
 def get_canvas_offset():
-    return (500, 500)
+    return (500, 700)
     
-
 def draw_bb_centerline(canvas: Canvas, bb: Bottombracket, color_centerline):
     pass
 
