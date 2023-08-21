@@ -19,7 +19,7 @@ class Main_window :
         color_cp = "#009999"
         color_bg = "black"
         color_outline = "#aaaaaa"
-        color_centerline = "green"
+        color_centerline = "#00ff00"
         color_metal = "#707070"
         
         dash_cp = (6, 10)

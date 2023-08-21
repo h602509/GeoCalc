@@ -1,15 +1,16 @@
+from tkinter import Canvas
 from FrameComponents.ContactPoints import ContactPoints
 
 class ContactPoints_menu_view:
     
-    def __init__(self, master, tk, cp) :
+    def __init__(self, master : Canvas, tk, cp) :
         self.master = master
         self.tk = tk
         self.cp = cp
 
         #functions for getting input text
         def save_seat_height(event):
-            self.seat_heigth = ent_seat_heigth.get()
+            self.cp.bb_seat_distance = ent_seat_heigth.get()
             
         def save_bb_grip(event):
             self.bb_grip_distance = ent_bb_grip.get()

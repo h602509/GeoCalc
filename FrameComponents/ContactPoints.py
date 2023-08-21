@@ -1,5 +1,4 @@
 from math import cos, sin, atan, degrees, radians
-from Utils.Point import Point
 from Utils.Geometry_helper import Geometry_helper
 
 class ContactPoints :

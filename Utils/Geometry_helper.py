@@ -1,8 +1,5 @@
 import math
 
-from Utils.Point import Point
-
-
 class Geometry_helper:
     
     @staticmethod
